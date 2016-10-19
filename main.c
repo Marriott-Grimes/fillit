@@ -21,8 +21,8 @@ int		main(int argc, char **argv)
 	output = NULL;
 	if (argc == 1)
 		return (0);
+	n = 2 * ft_sqrt(argc - 1) - 1;
 	tet_list = (t_piece **)malloc(sizeof(t_piece *) * argc);
-	n = 2 * ft_sqrt(argc - 1);
 	tet_list = copy_piece_list(&argv[1], tet_list, n);
 	while (1)
 	{
@@ -31,7 +31,9 @@ int		main(int argc, char **argv)
 		output = search(output, tet_list, 0, n);
 		if (output == NULL)
 		{
+			ft_putstr("*********\n");
 			free(output);
+			ft_putstr("WHy no see this?\n");
 			n++;
 		}
 		else 

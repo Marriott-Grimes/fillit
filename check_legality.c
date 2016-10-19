@@ -15,10 +15,20 @@
 int		check_legality(char *str, t_piece *piece)
 {
 	size_t i;
+	size_t n;
+	size_t a;
+	size_t b;
+	size_t c;
+	size_t d;
 
 	i = piece->offset;
-	if (DOT(str[piece->box1 + i], str[piece->box2 + i],
-		str[piece->box3 + i], str[piece->box4 + i]))
+	n = piece->n;
+	a = (piece->box1)(n) + i;
+	b = (piece->box2)(n) + i;
+	c = (piece->box3)(n) + i;
+	d = (piece->box4)(n) + i;
+
+	if (DOT(str[a], str[b], str[c], str[d]))
 		return (1);
 	return (0);
 }

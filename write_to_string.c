@@ -15,11 +15,13 @@
 char	*write_to_string(char *ans, t_piece *piece, char c)
 {
 	size_t i;
+	size_t n;
 
 	i = piece->offset;
-	ans[piece->box1 + i] = c;
-	ans[piece->box2 + i] = c;
-	ans[piece->box3 + i] = c;
-	ans[piece->box4 + i] = c;
+	n = piece->n;
+	ans[(piece->box1)(n) + i] = c;
+	ans[(piece->box2)(n) + i] = c;
+	ans[(piece->box3)(n) + i] = c;
+	ans[(piece->box4)(n) + i] = c;
 	return (ans);
 }

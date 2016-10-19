@@ -30,7 +30,13 @@ int two(int n)
 	return (2);
 }
 
-int n(int n)
+int three(int n)
+{
+	(void)n;
+	return (2);
+}
+
+int npzero(int n)
 {
 	return (n);
 }
@@ -57,5 +63,5 @@ int twonpone(int n)
 
 int threen(int n)
 {
-	return (2 * n);
+	return (3 * n);
 }
