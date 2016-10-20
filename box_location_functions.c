@@ -12,56 +12,76 @@
 
 #include "fillit.h"
 
-int zero(int n)
+int	box1_loc(t_piece *piece, size_t n)
 {
-	(void)n;
-	return (0);
+	return (piece->box1m * n + piece->box1b);
 }
 
-int one(int n)
+int	box2_loc(t_piece *piece, size_t n)
 {
-	(void)n;
-	return (1);
+	return (piece->box2m * n + piece->box2b);
 }
 
-int two(int n)
+int	box3_loc(t_piece *piece, size_t n)
 {
-	(void)n;
-	return (2);
+	return (piece->box3m * n + piece->box3b);
 }
 
-int three(int n)
+int	box4_loc(t_piece *piece, size_t n)
 {
-	(void)n;
-	return (2);
+	return (piece->box4m * n + piece->box4b);
 }
 
-int npzero(int n)
-{
-	return (n);
-}
+// int	zero(int n)
+// {
+// 	(void)n;
+// 	return (0);
+// }
 
-int npone(int n)
-{
-	return (n + 1);
-}
+// int one(int n)
+// {
+// 	(void)n;
+// 	return (1);
+// }
 
-int nptwo(int n)
-{
-	return (n + 2);
-}
+// int two(int n)
+// {
+// 	(void)n;
+// 	return (2);
+// }
 
-int twon(int n)
-{
-	return (2 * n);
-}
+// int three(int n)
+// {
+// 	(void)n;
+// 	return (2);
+// }
 
-int twonpone(int n)
-{
-	return (2 * n + 1);
-}
+// int npzero(int n)
+// {
+// 	return (n);
+// }
 
-int threen(int n)
-{
-	return (3 * n);
-}
+// int npone(int n)
+// {
+// 	return (n + 1);
+// }
+
+// int nptwo(int n)
+// {
+// 	return (n + 2);
+// }
+
+// int twon(int n)
+// {
+// 	return (2 * n);
+// }
+
+// int twonpone(int n)
+// {
+// 	return (2 * n + 1);
+// }
+
+// int threen(int n)
+// {
+// 	return (3 * n);
+// }

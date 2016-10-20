@@ -12,14 +12,14 @@
 
 #include "fillit.h"
 
-t_piece		**copy_piece_list(char **list, t_piece **tet_list, size_t n)
+t_piece		**copy_piece_list(char **list, t_piece **tet_list)
 {
 	int i;
 
 	i = 0;
 	while (list[i])
 	{
-		tet_list[i] = create_piece(list[i], n);
+		tet_list[i] = create_piece(list[i]);
 		i++;
 	}
 	tet_list[i] = NULL;

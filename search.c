@@ -17,28 +17,25 @@ char	*search(char *ans, t_piece **tet_list, size_t i, size_t n)
 	t_piece *piece;
 
 	piece = NULL;
-	tet_list = update_box_size(tet_list, n);
 	if (tet_list[i] != NULL)
 	{
 		piece = tet_list[i];
-		while (!check_legality(ans, piece) && (piece->box4)(n) + piece->offset < n * n)
+		while (!check_legality(ans, piece, n) && box4_loc(piece, n) + piece->offset < n * n)
 		{
 			piece = inc_right(piece, n);
 		}
-		if (check_legality(ans, piece))
+		if (check_legality(ans, piece, n))
 		{
-			ft_putnbr(i);
-			ft_putstr("count this\n");
-			ans = write_to_string(ans, piece, 'A' + i);
+			ans = write_to_string(ans, piece, 'A' + i, n);
+			tet_list[i] = piece;
 			return (search(ans, tet_list, i + 1, n));
 		}
 		else
 		{
-			ft_putstr("about to backtrack\n");
-			piece->offset = 0;
 			if (i == 0)
 				return (NULL);
-			ans = write_to_string(ans, tet_list[i - 1], '.');
+			piece->offset = 0;
+			ans = write_to_string(ans, tet_list[i - 1], '.', n);
 			tet_list[i - 1] = inc_right(tet_list[i - 1], n);
 			return (search(ans, tet_list, i - 1, n));
 		}

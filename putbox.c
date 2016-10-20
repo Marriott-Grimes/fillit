@@ -12,9 +12,9 @@
 
 #include "fillit.h"
 
-void	putbox(char *str, int n)
+void	putbox(char *str, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while(i < n * n)

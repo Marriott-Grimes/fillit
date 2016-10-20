@@ -12,14 +12,14 @@
 
 #include "fillit.h"
 
-char	*new_box(int n)
+char	*new_box(size_t n)
 {
 	char *ans;
-	int i;
+	size_t i;
 
 	i = 0;
 	ans = (char *)malloc(n * n);
-	while (ans[i] < n * n)
+	while (i < n * n)
 	{
 		ans[i] = '.';
 		i++;

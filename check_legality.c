@@ -12,21 +12,19 @@
 
 #include "fillit.h"
 
-int		check_legality(char *str, t_piece *piece)
+int		check_legality(char *str, t_piece *piece, size_t n)
 {
 	size_t i;
-	size_t n;
 	size_t a;
 	size_t b;
 	size_t c;
 	size_t d;
 
 	i = piece->offset;
-	n = piece->n;
-	a = (piece->box1)(n) + i;
-	b = (piece->box2)(n) + i;
-	c = (piece->box3)(n) + i;
-	d = (piece->box4)(n) + i;
+	a = box1_loc(piece, n) + i;
+	b = box2_loc(piece, n) + i;
+	c = box3_loc(piece, n) + i;
+	d = box4_loc(piece, n) + i;
 
 	if (DOT(str[a], str[b], str[c], str[d]))
 		return (1);

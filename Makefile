@@ -7,7 +7,7 @@ NAME = fillit
 SRCS = main.c ft_sqrt.c inc_right.c \
 	piece_lookup.c search.c tetramino_templates.c \
 	write_to_string.c putbox.c check_legality.c \
-	copy_piece_list.c new_box.c update_box_size.c \
+	copy_piece_list.c new_box.c \
 	box_location_functions.c
 
 OBJ = $(SRCS:.c=.o)

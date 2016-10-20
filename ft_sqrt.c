@@ -12,9 +12,9 @@
 
 #include "fillit.h"
 
-int	ft_sqrt(int n)
+int	ft_sqrt(size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (i * i < n)
