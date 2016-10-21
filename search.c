@@ -32,9 +32,9 @@ char	*search(char *ans, t_piece **tet_list, size_t i, size_t n)
 		}
 		else
 		{
+			piece->offset = 0;
 			if (i == 0)
 				return (NULL);
-			piece->offset = 0;
 			ans = write_to_string(ans, tet_list[i - 1], '.', n);
 			tet_list[i - 1] = inc_right(tet_list[i - 1], n);
 			return (search(ans, tet_list, i - 1, n));
@@ -42,3 +42,6 @@ char	*search(char *ans, t_piece **tet_list, size_t i, size_t n)
 	}
 	return (ans);
 }
+
+// TODO: Determine EXACTLY when the offset is saved to tet_list, and when it is overwritten
+// more importantly, is the offset ever nonzero when n increments?
