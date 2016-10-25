@@ -14,31 +14,30 @@
 
 int		main(int argc, char **argv)
 {
-	char	*output;
-	t_piece	**tet_list;
-	size_t	n;
+	t_flagged_string	output;
+	t_piece				**tet_list;
+	size_t				n;
 
-	output = NULL;
 	if (argc == 1)
 		return (0);
 	n = 2 * ft_sqrt(argc - 1) - 1;
+	output.str = new_box(n); 
+	output.index = 0;
 	tet_list = (t_piece **)malloc(sizeof(t_piece *) * argc);
 	tet_list = copy_piece_list(&argv[1], tet_list);
-	while (1)
+	while (output.index != -1)
 	{
-		output = new_box(n);
-		output = search(output, tet_list, 0, n);
-		if (output == NULL)
+		output = search(output.str, tet_list, output.index, n);
+		if (output.index == -2)
 		{
-			free(output);
+			free(output.str);
 			n++;
-			ft_putnbr(n);
-			ft_putstr(" == n\n");
-		}
-		else 
-		{
-			putbox(output, n);
-			return (0);
+			output.str = new_box(n);
+			output.index = 0;
+			// ft_putnbr(n);
+			// ft_putstr(" == n\n");
 		}
 	}
+	putbox(output.str, n);
+	return (0);
 }

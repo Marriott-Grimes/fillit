@@ -21,11 +21,10 @@ int		check_legality(char *str, t_piece *piece, size_t n)
 	size_t d;
 
 	i = piece->offset;
-	a = box1_loc(piece, n) + i;
+	a = box1_loc(piece) + i;
 	b = box2_loc(piece, n) + i;
 	c = box3_loc(piece, n) + i;
 	d = box4_loc(piece, n) + i;
-
 	if (DOT(str[a], str[b], str[c], str[d]))
 		return (1);
 	return (0);

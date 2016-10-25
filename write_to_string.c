@@ -17,7 +17,7 @@ char	*write_to_string(char *ans, t_piece *piece, char c, size_t n)
 	size_t i;
 
 	i = piece->offset;
-	ans[box1_loc(piece, n) + i] = c;
+	ans[box1_loc(piece) + i] = c;
 	ans[box2_loc(piece, n) + i] = c;
 	ans[box3_loc(piece, n) + i] = c;
 	ans[box4_loc(piece, n) + i] = c;

@@ -24,6 +24,5 @@ char	*new_box(size_t n)
 		ans[i] = '.';
 		i++;
 	}
-	ans[i] = 0;
 	return (ans);
 }
