@@ -30,8 +30,6 @@ t_flagged_string	search(char *output, t_piece **tet_list, size_t i, size_t n)
 			{
 				ans.str = write_to_string(ans.str, piece, 'A' + i, n);
 				tet_list[i]->offset = piece->offset;
-				// putbox(ans.str, n);
-				// ft_putstr("step forward\n");
 				ans.index = i + 1;
 				return (ans);
 			}
@@ -44,8 +42,6 @@ t_flagged_string	search(char *output, t_piece **tet_list, size_t i, size_t n)
 		}
 		ans.str = write_to_string(ans.str, tet_list[i - 1], '.', n);
 		tet_list[i - 1] = inc_right(tet_list[i - 1], n);
-		// putbox(ans.str, n);
-		// ft_putstr("step backward\n");
 		ans.index = i - 1;
 		return (ans);
 	}

@@ -34,8 +34,6 @@ int		main(int argc, char **argv)
 			n++;
 			output.str = new_box(n);
 			output.index = 0;
-			// ft_putnbr(n);
-			// ft_putstr(" == n\n");
 		}
 	}
 	putbox(output.str, n);
