@@ -46,7 +46,7 @@ t_piece *create_rL2(t_piece *piece)
 {
 	piece->offset = 0;
 	piece->box1x = 0;
-	piece->box2y = 1;
+	piece->box2y = 0;
 	piece->box2x = 1;
 	piece->box3y = 1;
 	piece->box3x = 0;
