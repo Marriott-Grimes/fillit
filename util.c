@@ -49,7 +49,7 @@ void			insert_id(int n, int i)
 	g_final_pieces[i] = global_arrays_names[n];
 }
 
-int		get_piece_count(char *pieces)
+int				get_piece_count(char *pieces)
 {
 	int len;
 	int i;
@@ -64,42 +64,13 @@ int		get_piece_count(char *pieces)
 			count++;
 		i++;
 	}
-	if (count % 4 == 0 && count > 0)
-		count /= 4;
-	else
+	if (error_check(pieces, count))
 	{
 		errors(1);
 		exit(EXIT_FAILURE);
 	}
-	return (count);
+	return (count / 4);
 }
-
-// int      get_piece_count(char *pieces)
-// {
-// 	int i;
-// 	int len;
-//     int piece_count;
-//     int nl_count;
-
-//     nl_count = 0;
-//     len = ft_strlen(pieces);
-// 	piece_count = 0;
-// 	i = 0;
-// 	while (pieces[i] != '\0')
-// 	{
-// 		if (pieces[i] == '\n')
-// 		{
-// 			nl_count++;
-//             if (i != len)
-//                 if (pieces[i + 1] == '\n')
-// 			        piece_count++;
-// 		}
-// 		i++;
-// 	}
-// 	if (nl_count == 4 && piece_count == 0)
-// 		piece_count = 1;
-//    	return (piece_count + 1);
-// }
 
 void			errors(int n)
 {
@@ -108,5 +79,3 @@ void			errors(int n)
 	if (n == 2)
 		ft_putstr("usage: ./fillit source_file\n");
 }
-
-

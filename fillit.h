@@ -84,6 +84,7 @@ void				errors(int n);
 void				pieces_init();
 char				*write_to_string(char *s, t_piece *p, char c, size_t n);
 int					check_legality(char *str, t_piece *piece, size_t n);
+int					error_check(char *pieces, int count);
 t_piece				**copy_piece_list(char **list, t_piece **tet_list);
 t_piece				*create_piece(char *str);
 t_piece				*create_piece_part_2(char *str, t_piece *piece);

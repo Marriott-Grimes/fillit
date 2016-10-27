@@ -11,7 +11,8 @@ SRCS = main.c ft_sqrt.c inc_right.c \
 	box_location_functions.c util.c match_piece.c \
 	tetramino_templates_SZ.c tetramino_templates_L.c \
 	tetramino_templates_T.c tetramino_templates_J.c \
-	pieces_arrays.c pieces2_array.c read_from_file.c
+	pieces_arrays.c pieces2_array.c read_from_file.c \
+	error_check.c
 
 OBJ = $(SRCS:.c=.o)
 
