@@ -28,13 +28,13 @@ t_piece	*create_piece(char *c)
 	if (!ft_strcmp(c,"L3"))
 		return (create_L3(piece));
 	if (!ft_strcmp(c,"J0"))
-		return (create_rL0(piece));
+		return (create_J0(piece));
 	if (!ft_strcmp(c,"J1"))
-		return (create_rL1(piece));
+		return (create_J1(piece));
 	if (!ft_strcmp(c,"J2"))
-		return (create_rL2(piece));
+		return (create_J2(piece));
 	if (!ft_strcmp(c,"J3"))
-		return (create_rL3(piece));
+		return (create_J3(piece));
 	else
 		return (create_piece_part_2(c, piece));
 }

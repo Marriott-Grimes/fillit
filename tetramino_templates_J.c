@@ -12,7 +12,7 @@
 
 #include "fillit.h"
 
-t_piece	*create_rL0(t_piece *piece)
+t_piece	*create_J0(t_piece *piece)
 {
 	piece->offset = 0;
 	piece->box1x = 1;
@@ -27,7 +27,7 @@ t_piece	*create_rL0(t_piece *piece)
 	return (piece);	
 }
 
-t_piece	*create_rL1(t_piece *piece)
+t_piece	*create_J1(t_piece *piece)
 {
 	piece->offset = 0;
 	piece->box1x = 0;
@@ -42,7 +42,7 @@ t_piece	*create_rL1(t_piece *piece)
 	return (piece);	
 }
 
-t_piece *create_rL2(t_piece *piece)
+t_piece *create_J2(t_piece *piece)
 {
 	piece->offset = 0;
 	piece->box1x = 0;
@@ -57,7 +57,7 @@ t_piece *create_rL2(t_piece *piece)
 	return (piece);	
 }
 
-t_piece *create_rL3(t_piece *piece)
+t_piece *create_J3(t_piece *piece)
 {
 	piece->offset = 0;
 	piece->box1x = 0;

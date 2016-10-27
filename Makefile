@@ -1,6 +1,6 @@
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=address
 
 NAME = fillit
 
@@ -8,9 +8,10 @@ SRCS = main.c ft_sqrt.c inc_right.c \
 	piece_lookup.c search.c tetramino_templates.c \
 	write_to_string.c putbox.c check_legality.c \
 	copy_piece_list.c new_box.c \
-	box_location_functions.c tetramino_templates_J.c \
+	box_location_functions.c util.c match_piece.c \
 	tetramino_templates_SZ.c tetramino_templates_L.c \
-	tetramino_templates_T.c 
+	tetramino_templates_T.c tetramino_templates_J.c \
+	pieces_arrays.c pieces2_array.c read_from_file.c
 
 OBJ = $(SRCS:.c=.o)
 
