@@ -24,10 +24,10 @@ void	match_piece(char *pieces)
 	char **arr;
 
 	i = 0;
-	match_found = 0;
 	while (i < g_piece_count)
 	{
 		j = 0;
+		match_found = 0;
 		while (j < 19)
 		{
 			arr = which_global_array(j);

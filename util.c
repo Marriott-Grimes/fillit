@@ -64,7 +64,7 @@ int				get_piece_count(char *pieces)
 			count++;
 		i++;
 	}
-	if (error_check(pieces, count))
+	if (!error_check(pieces, count))
 	{
 		errors(1);
 		exit(EXIT_FAILURE);

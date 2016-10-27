@@ -19,6 +19,12 @@ int		error_check(char *pieces, int count)
 
 	len = ft_strlen(pieces);
 	i = 0;
+	while (pieces[i])
+	{
+		if (pieces[i] != '.' && pieces[i] != '\n' && pieces[i] != '#')
+			return (0);
+		i++;
+	}
 
 	if (count % 4 == 0 && count > 0 && len % 21 == 20
 		&& len == (count / 4) * 21 - 1)
