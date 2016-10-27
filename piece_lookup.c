@@ -63,6 +63,5 @@ t_piece	*create_piece_part_2(char *c, t_piece *piece)
 		return (create_I1(piece));
 	if (!ft_strcmp(c,"SQ"))
 		return (create_SQ(piece));
-	ft_putstr("u fukd up\n");
 	return(NULL);
 }

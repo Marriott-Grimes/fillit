@@ -14,23 +14,23 @@
 
 static char 	*read_from_file(int fd)
 {
-	int i;
-    char *buf;
-    char *all_pieces;
+	int			i;
+	char		*buf;
+	char		*all_pieces;
 
 	i = 0;
 	buf = (char *)malloc(sizeof(char) * 1);
 	all_pieces = (char *)malloc(sizeof(char) * 600);
 	while (read(fd, buf, 1))
 	{
-        all_pieces[i] = *buf;
-        i++;
+		all_pieces[i] = *buf;
+		i++;
 	}
-    all_pieces[i] = '\0';
+	all_pieces[i] = '\0';
 	return (all_pieces);
 }
 
-void	start_read(char **argv)
+void			start_read(char **argv)
 {
 	char *all_pieces;
 	int fd;
@@ -40,7 +40,7 @@ void	start_read(char **argv)
 	if (!all_pieces)
 		return ;
 	g_piece_count = get_piece_count(all_pieces);
-    match_piece(all_pieces);
+	match_piece(all_pieces);
 	close(fd);
 }
 

@@ -25,9 +25,8 @@ int		error_check(char *pieces, int count)
 			return (0);
 		i++;
 	}
-
 	if (count % 4 == 0 && count > 0 && len % 21 == 20
-		&& len == (count / 4) * 21 - 1)
+	&& len == (count / 4) * 21 - 1)
 		return (1);
 	return (0);
 }

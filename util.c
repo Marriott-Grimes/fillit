@@ -16,10 +16,13 @@ void			pieces_init()
 {
 	I_init();
 	L_init();
+	L_init2();
 	J_init();
+	J_init2();
 	S_init();
 	SQ_init();
 	T_init();
+	T_init2();
 	Z_init();
 }
 
