@@ -14,8 +14,8 @@
 
 char	*new_box(size_t n)
 {
-	char *ans;
-	size_t i;
+	char	*ans;
+	size_t	i;
 
 	i = 0;
 	ans = (char *)malloc(n * n);

@@ -12,7 +12,7 @@
 
 #include "fillit.h"
 
-static char 	*read_from_file(int fd)
+static char		*read_from_file(int fd)
 {
 	int			i;
 	char		*buf;
@@ -32,8 +32,8 @@ static char 	*read_from_file(int fd)
 
 void			start_read(char **argv)
 {
-	char *all_pieces;
-	int fd;
+	char	*all_pieces;
+	int		fd;
 
 	fd = open(argv[1], O_RDONLY, 600);
 	all_pieces = read_from_file(fd);
@@ -43,4 +43,3 @@ void			start_read(char **argv)
 	match_piece(all_pieces);
 	close(fd);
 }
-

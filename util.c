@@ -12,18 +12,18 @@
 
 #include "fillit.h"
 
-void			pieces_init()
+void			pieces_init(void)
 {
-	I_init();
-	L_init();
-	L_init2();
-	J_init();
-	J_init2();
-	S_init();
-	SQ_init();
-	T_init();
-	T_init2();
-	Z_init();
+	i_init();
+	l_init();
+	l_init2();
+	j_init();
+	j_init2();
+	s_init();
+	sq_init();
+	t_init();
+	t_init2();
+	z_init();
 }
 
 void			insert_id(int n, int i)

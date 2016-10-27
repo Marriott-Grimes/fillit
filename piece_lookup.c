@@ -12,56 +12,56 @@
 
 #include "fillit.h"
 
-t_piece	*create_piece(char *c)
+t_piece		*create_piece(char *c)
 {
 	t_piece *piece;
 
 	piece = (t_piece *)malloc(sizeof(t_piece));
 	if (!piece)
 		return (NULL);
-	if (!ft_strcmp(c,"L0"))
-		return (create_L0(piece));
-	if (!ft_strcmp(c,"L1"))
-		return (create_L1(piece));
-	if (!ft_strcmp(c,"L2"))
-		return (create_L2(piece));
-	if (!ft_strcmp(c,"L3"))
-		return (create_L3(piece));
-	if (!ft_strcmp(c,"J0"))
-		return (create_J0(piece));
-	if (!ft_strcmp(c,"J1"))
-		return (create_J1(piece));
-	if (!ft_strcmp(c,"J2"))
-		return (create_J2(piece));
-	if (!ft_strcmp(c,"J3"))
-		return (create_J3(piece));
+	if (!ft_strcmp(c, "L0"))
+		return (create_l0(piece));
+	if (!ft_strcmp(c, "L1"))
+		return (create_l1(piece));
+	if (!ft_strcmp(c, "L2"))
+		return (create_l2(piece));
+	if (!ft_strcmp(c, "L3"))
+		return (create_l3(piece));
+	if (!ft_strcmp(c, "J0"))
+		return (create_j0(piece));
+	if (!ft_strcmp(c, "J1"))
+		return (create_j1(piece));
+	if (!ft_strcmp(c, "J2"))
+		return (create_j2(piece));
+	if (!ft_strcmp(c, "J3"))
+		return (create_j3(piece));
 	else
 		return (create_piece_part_2(c, piece));
 }
-	
-t_piece	*create_piece_part_2(char *c, t_piece *piece)
+
+t_piece		*create_piece_part_2(char *c, t_piece *piece)
 {
-	if (!ft_strcmp(c,"T0"))
-		return (create_T0(piece));
-	if (!ft_strcmp(c,"T1"))
-		return (create_T1(piece));
-	if (!ft_strcmp(c,"T2"))
-		return (create_T2(piece));
-	if (!ft_strcmp(c,"T3"))
-		return (create_T3(piece));
-	if (!ft_strcmp(c,"S0"))
-		return (create_S0(piece));
-	if (!ft_strcmp(c,"S1"))
-		return (create_S1(piece));
-	if (!ft_strcmp(c,"Z0"))
-		return (create_Z0(piece));
-	if (!ft_strcmp(c,"Z1"))
-		return (create_Z1(piece));
-	if (!ft_strcmp(c,"I0"))
-		return (create_I0(piece));
-	if (!ft_strcmp(c,"I1"))
-		return (create_I1(piece));
-	if (!ft_strcmp(c,"SQ"))
-		return (create_SQ(piece));
-	return(NULL);
+	if (!ft_strcmp(c, "T0"))
+		return (create_t0(piece));
+	if (!ft_strcmp(c, "T1"))
+		return (create_t1(piece));
+	if (!ft_strcmp(c, "T2"))
+		return (create_t2(piece));
+	if (!ft_strcmp(c, "T3"))
+		return (create_t3(piece));
+	if (!ft_strcmp(c, "S0"))
+		return (create_s0(piece));
+	if (!ft_strcmp(c, "S1"))
+		return (create_s1(piece));
+	if (!ft_strcmp(c, "Z0"))
+		return (create_z0(piece));
+	if (!ft_strcmp(c, "Z1"))
+		return (create_z1(piece));
+	if (!ft_strcmp(c, "I0"))
+		return (create_i0(piece));
+	if (!ft_strcmp(c, "I1"))
+		return (create_i1(piece));
+	if (!ft_strcmp(c, "SQ"))
+		return (create_sq(piece));
+	return (NULL);
 }

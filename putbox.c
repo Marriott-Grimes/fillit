@@ -17,7 +17,7 @@ void	putbox(char *str, size_t n)
 	size_t i;
 
 	i = 0;
-	while(i < n * n)
+	while (i < n * n)
 	{
 		ft_putchar(str[i]);
 		i++;

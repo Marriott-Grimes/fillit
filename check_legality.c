@@ -29,4 +29,3 @@ int		check_legality(char *str, t_piece *piece, size_t n)
 		return (1);
 	return (0);
 }
-

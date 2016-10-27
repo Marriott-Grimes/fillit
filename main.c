@@ -12,27 +12,38 @@
 
 #include "fillit.h"
 
-char *g_I_0[4 + 1];
-char *g_I_1[4 + 1];
-char *g_L_0[6 + 1];
-char *g_L_1[6 + 1];
-char *g_L_2[6 + 1];
-char *g_L_3[6 + 1];
-char *g_L_4[6 + 1];
-char *g_J_0[6 + 1];
-char *g_J_1[6 + 1];
-char *g_J_2[6 + 1];
-char *g_J_3[6 + 1];
-char *g_S_0[6 + 1];
-char *g_S_1[6 + 1];
-char *g_SQ_[9 + 1];
-char *g_T_0[6 + 1];
-char *g_T_1[6 + 1];
-char *g_T_2[6 + 1];
-char *g_T_3[6 + 1];
-char *g_Z_0[6 + 1];
-char *g_Z_1[6 + 1];
-int	 g_piece_count;
+char	*g_i_0[5];
+char	*g_i_1[5];
+char	*g_l_0[7];
+char	*g_l_1[7];
+char	*g_l_2[7];
+char	*g_l_3[7];
+char	*g_l_4[7];
+char	*g_j_0[7];
+char	*g_j_1[7];
+char	*g_j_2[7];
+char	*g_j_3[7];
+char	*g_s_0[7];
+char	*g_s_1[7];
+char	*g_sq_[10];
+char	*g_t_0[7];
+char	*g_t_1[7];
+char	*g_t_2[7];
+char	*g_t_3[7];
+char	*g_z_0[7];
+char	*g_z_1[7];
+int		g_piece_count;
+
+void	twenny_five_lines_lol(int argc, char **argv)
+{
+	if (argc != 2)
+	{
+		errors(2);
+		exit(EXIT_FAILURE);
+	}
+	pieces_init();
+	start_read(argv);
+}
 
 int		main(int argc, char **argv)
 {
@@ -40,15 +51,9 @@ int		main(int argc, char **argv)
 	t_piece				**tet_list;
 	size_t				n;
 
-	if (argc != 2)
-	{
-		errors(2);
-		return (0); 
-	}
-	pieces_init();
-	start_read(argv);
+	twenny_five_lines_lol(argc, argv);
 	n = 2 * ft_sqrt(g_piece_count) - 1;
-	output.str = new_box(n); 
+	output.str = new_box(n);
 	output.index = 0;
 	tet_list = (t_piece **)malloc(sizeof(t_piece *) * (g_piece_count + 1));
 	tet_list = copy_piece_list(g_final_pieces, tet_list);
