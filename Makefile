@@ -16,7 +16,7 @@ SRCS = main.c ft_sqrt.c inc_right.c \
 
 OBJ = $(SRCS:.c=.o)
 
-LIBS = libft.a
+LIBS = libft/libft.a
 
 .PHONY: all comp clean fclean re
 
@@ -25,13 +25,18 @@ all: $(NAME)
 $(OBJ): $(SRCS)
 	$(CC) -c $(CFLAGS) $(SRCS)
 
-$(NAME): $(OBJ)
+$(LIBS): 
+	$(MAKE) -C ./libft
+
+$(NAME): $(OBJ) $(LIBS)
 	$(CC) -o $(NAME) $(CFLAGS) $(OBJ) $(LIBS)
 
 clean:
 	@rm -f $(OBJ)
+	$(MAKE) -C ./libft/ clean
 
 fclean: clean
 	@rm -f $(NAME)
+	@$(MAKE) -C ./libft/ fclean
 
 re: fclean all
